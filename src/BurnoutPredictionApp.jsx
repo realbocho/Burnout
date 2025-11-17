@@ -628,6 +628,60 @@ const BurnoutPredictionApp = () => {
               </div>
             </div>
 
+            {/* 번아웃 극복법의 근본 원리 */}
+            <div className="bg-white rounded-2xl shadow-sm p-4 mb-6">
+              <h3 className="text-lg font-bold mb-4 flex items-center text-gray-800">
+                <Heart className="w-5 h-5 mr-2" />
+                번아웃 극복법의 근본 원리
+              </h3>
+              <div className="space-y-4 text-sm text-gray-700">
+                <div className="bg-blue-50 p-3 rounded-lg">
+                  <h4 className="font-bold text-gray-800 mb-2">🎯 핵심 원리</h4>
+                  <p className="leading-relaxed">
+                    학생 번아웃은 단순한 피로가 아닌 <strong>'학습된 무기력'</strong>과 <strong>'가치관 불일치'</strong>의 결합입니다. 
+                    아무리 노력해도 상황이 바뀌지 않는다는 믿음과 나의 가치관과 학업 환경의 불일치가 핵심 원인입니다.
+                  </p>
+                </div>
+                
+                <div className="grid grid-cols-1 gap-3">
+                  <div className="border-l-4 border-red-400 pl-3">
+                    <h5 className="font-semibold text-red-700">효능감 저하·무력감 (L)</h5>
+                    <p className="text-xs">학습된 무기력: 통제 불가능한 스트레스에 반복 노출되어 발생</p>
+                  </div>
+                  <div className="border-l-4 border-yellow-400 pl-3">
+                    <h5 className="font-semibold text-yellow-700">냉소·탈동기화 (C)</h5>
+                    <p className="text-xs">가치관 불일치: 내적 가치보다 외적 가치에 의한 강요된 학업</p>
+                  </div>
+                  <div className="border-l-4 border-orange-400 pl-3">
+                    <h5 className="font-semibold text-orange-700">정서적·신체적 소진 (E)</h5>
+                    <p className="text-xs">만성적 스트레스: 무기력과 불일치에서 발생하는 지속적 스트레스</p>
+                  </div>
+                </div>
+
+                <div className="bg-green-50 p-3 rounded-lg">
+                  <h4 className="font-bold text-gray-800 mb-2">🔧 해결 방법</h4>
+                  <div className="space-y-2">
+                    <div>
+                      <strong className="text-green-700">철학적 질문 (인지적 재구성)</strong>
+                      <p className="text-xs">자동적 부정적 사고를 멈추고 관점 전환을 통해 주체성 회복</p>
+                    </div>
+                    <div>
+                      <strong className="text-green-700">구조적 행동 (행동 활성화)</strong>
+                      <p className="text-xs">극도로 작은 성공 경험을 통해 '내가 통제할 수 있다'는 믿음 재구축</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-purple-50 p-3 rounded-lg">
+                  <h4 className="font-bold text-gray-800 mb-2">💡 핵심 메시지</h4>
+                  <p className="text-xs leading-relaxed">
+                    <strong>번아웃은 당신의 의지 문제가 아닙니다.</strong> 환경과의 불일치와 학습된 무기력의 결과입니다. 
+                    인지적 관점 전환과 최소 단위의 행동 성공을 통해 주체성을 회복할 수 있습니다.
+                  </p>
+                </div>
+              </div>
+            </div>
+
             {/* 맞춤 솔루션 */}
             <div className="bg-white rounded-2xl shadow-sm p-4">
               <h3 className="text-lg font-bold mb-4 flex items-center text-gray-800">
