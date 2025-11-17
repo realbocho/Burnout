@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta name="description" content="번아웃 시기 예측 및 관리를 위한 모바일 전용 웹사이트" />
+  <meta name="keywords" content="번아웃, 예측, 진단, 정신건강, 스트레스, 관리" />
+  <meta name="author" content="Burnout Prediction System" />
+  
+  <!-- PWA 설정 -->
+  <meta name="theme-color" content="#3b82f6" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="번아웃 예측" />
+  
+  <!-- 아이콘 설정 -->
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  
+  <title>번아웃 예측 - 모바일 진단 시스템</title>
+  
+  <style>
+    /* 초기 로딩 스타일 */
+    #loading {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #dbeafe 0%, #c7d2fe 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    
+    .spinner {
+      width: 40px;
+      height: 40px;
+      border: 4px solid #e5e7eb;
+      border-left-color: #3b82f6;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    
+    .loading-text {
+      margin-top: 16px;
+      color: #374151;
+      font-size: 16px;
+      font-weight: 500;
+    }
+    
+    /* 모바일 최적화 기본 스타일 */
+    * {
+      -webkit-tap-highlight-color: transparent;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+      background-color: #f9fafb;
+    }
+    
+    /* 스크롤바 숨기기 */
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    
+    /* 터치 피드백 개선 */
+    button, [role="button"] {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+    }
+    
+    /* 입력 필드 줌 방지 */
+    input[type="text"], input[type="email"], input[type="password"], input[type="number"], textarea, select {
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <!-- 초기 로딩 화면 -->
+  <div id="loading">
+    <div class="spinner"></div>
+    <div class="loading-text">번아웃 진단 시스템 로딩 중...</div>
+  </div>
+  
+  <!-- React 앱이 마운트될 div -->
+  <div id="root"></div>
+  
+  <script type="module" src="/src/main.jsx"></script>
+  
+  <script>
+    // 로딩 화면 제거
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        const loading = document.getElementById('loading');
+        if (loading) {
+          loading.style.opacity = '0';
+          loading.style.transition = 'opacity 0.3s ease-out';
+          setTimeout(function() {
+            loading.remove();
+          }, 300);
+        }
+      }, 1000);
+    });
+    
+    // PWA 설치 이벤트 처리
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+    });
+    
+    // 뷰포트 높이 설정 (모바일 브라우저 주소창 대응)
+    function setViewportHeight() {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+    
+    setViewportHeight();
+    window.addEventListener('resize', setViewportHeight);
+    window.addEventListener('orientationchange', setViewportHeight);
+    
+    // 터치 이벤트 최적화
+    document.addEventListener('touchstart', function() {}, { passive: true });
+    document.addEventListener('touchmove', function() {}, { passive: true });
+  </script>
+</body>
+</html>
