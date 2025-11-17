@@ -66,20 +66,20 @@ const BurnoutPredictionApp = () => {
 
   const solutions = {
     philosophical: [
-      { title: '나의 가치 재정립', detail: '공부를 점수가 아닌 호기심으로 접근합니다. 현재 공부 중인 내용에서 가장 흥미로운 주제 1가지를 찾아 5분간 관련 영상이나 기사를 검색해보세요.', areas: 'C' },
-      { title: '자율성 회복', detail: '지금 학교나 학원에 다니지 않아도 된다면 하루가 어떻게 달라질지 생각해보고, 그 중 가장 쉬운 것 1가지를 오늘 30분 실행해보세요.', areas: 'C' },
-      { title: '자기 가치 재정의', detail: '성적이 아닌 나라는 사람을 설명하는 단어 3가지를 찾아 적고, 눈에 잘 띄는 곳에 붙여두세요.', areas: 'L' }
+      { title: '나의 가치 재정립', detail: '공부를 점수가 아닌 호기심으로 접근합니다. 현재 공부 중인 내용에서 가장 흥미로운 주제 1가지를 찾아 5분간 관련 영상이나 기사를 검색해보세요.', areas: 'C', principle: '내적 동기 부여(Intrinsic Motivation) - 학업의 목적을 외부 평가에서 나의 흥미로 전환하여 냉소를 해소합니다.' },
+      { title: '자율성 회복', detail: '지금 학교나 학원에 다니지 않아도 된다면 하루가 어떻게 달라질지 생각해보고, 그 중 가장 쉬운 것 1가지를 오늘 30분 실행해보세요.', areas: 'C', principle: '대안적 현실 탐색(Alternative Reality) - 통제권을 가진 상황을 상상하여 무기력을 해체하고 자율성을 회복합니다.' },
+      { title: '자기 가치 재정의', detail: '성적이 아닌 나라는 사람을 설명하는 단어 3가지를 찾아 적고, 눈에 잘 띄는 곳에 붙여두세요.', areas: 'L', principle: '자기 가치 분리(Self-Worth Decoupling) - 나의 가치=성적 공식을 깨고 성적과 무관한 존재 가치를 재확인합니다.' }
     ],
     structural: [
-      { title: '시간 블록 명확화', detail: '이번 주 계획 중 가장 중요하지 않은 과제 1가지를 하지 않기로 결정하고, 그 시간에 휴식을 넣으세요.', areas: 'L' },
-      { title: '공부 환경 재설계', detail: '공부 장소에서 가장 거슬리는 물건 1가지를 치우거나, 가장 좋아하는 물건 1가지를 배치하여 환경 통제감을 회복하세요.', areas: 'L' },
-      { title: '경쟁자 재정의', detail: '다른 사람과의 비교 대신 어제의 나와 비교하여, 단 1%라도 나아진 점을 찾아 기록하세요.', areas: 'C' },
-      { title: '성공 기준 분할', detail: '큰 목표 대신 오늘 1시간 집중하기나 문제 3개 풀기 같은 작은 성공 기준을 설정하고 달성 시 1분간 자신에게 보상을 주세요.', areas: 'L' }
+      { title: '시간 블록 명확화', detail: '이번 주 계획 중 가장 중요하지 않은 과제 1가지를 하지 않기로 결정하고, 그 시간에 휴식을 넣으세요.', areas: 'L', principle: '경계 설정(Boundary Setting) - 모든 것을 다 해야 한다는 강박에서 벗어나 하지 않을 권리를 행사합니다.' },
+      { title: '공부 환경 재설계', detail: '공부 장소에서 가장 거슬리는 물건 1가지를 치우거나, 가장 좋아하는 물건 1가지를 배치하여 환경 통제감을 회복하세요.', areas: 'L', principle: '환경 통제감 회복(Environmental Control) - 작은 영역을 통제하여 무기력을 해체하고 주체성을 회복합니다.' },
+      { title: '경쟁자 재정의', detail: '다른 사람과의 비교 대신 어제의 나와 비교하여, 단 1%라도 나아진 점을 찾아 기록하세요.', areas: 'C', principle: '사회적 비교 최소화(Social Comparison Reduction) - 타인과의 비교를 중단하고 자기 성장에 집중하여 냉소를 줄입니다.' },
+      { title: '성공 기준 분할', detail: '큰 목표 대신 오늘 1시간 집중하기나 문제 3개 풀기 같은 작은 성공 기준을 설정하고 달성 시 1분간 자신에게 보상을 주세요.', areas: 'L', principle: '행동 활성화(Behavioral Activation) - 작은 성공을 통해 행동→긍정적 결과의 선순환을 재가동합니다.' }
     ],
     recovery: [
-      { title: '비생산적 15분 의무화', detail: '매일 저녁 9시, 책상에서 떨어진 곳에서 학업과 무관한 활동(음악 듣기, 하늘 보기 등)을 15분간 실행하세요. 절대 공부로 대체하지 마세요.', areas: 'E, R' },
-      { title: '감정적 지지 요청', detail: '주 1회 가족이나 친구에게 나 지금 너무 힘들어. 그냥 들어만 줘라고 말하고, 조언 없이 3분간 감정만 이야기하세요.', areas: 'R, C' },
-      { title: '진로 탐색 최소화', detail: '어떤 직업을 가질까 대신 내가 싫어하는 직업 3가지를 적어보세요. 싫어하는 것을 명확히 하는 것이 더 쉽고 통제감을 줍니다.', areas: 'C' }
+      { title: '비생산적 15분 의무화', detail: '매일 저녁 9시, 책상에서 떨어진 곳에서 학업과 무관한 활동(음악 듣기, 하늘 보기 등)을 15분간 실행하세요. 절대 공부로 대체하지 마세요.', areas: 'E, R', principle: '회복의 의무화(Mandatory Recovery) - 휴식을 의무적 활동으로 규정하여 죄책감을 제거하고 에너지를 재충전합니다.' },
+      { title: '감정적 지지 요청', detail: '주 1회 가족이나 친구에게 나 지금 너무 힘들어. 그냥 들어만 줘라고 말하고, 조언 없이 3분간 감정만 이야기하세요.', areas: 'R, C', principle: '사회적 지지 활성화(Social Support Activation) - 감정적 연결을 통해 고립감을 해소하고 소속감을 회복합니다.' },
+      { title: '진로 탐색 최소화', detail: '어떤 직업을 가질까 대신 내가 싫어하는 직업 3가지를 적어보세요. 싫어하는 것을 명확히 하는 것이 더 쉽고 통제감을 줍니다.', areas: 'C', principle: '부정적 명확화(Negative Clarity) - 선택의 부담을 줄이고 통제감을 증진하여 진로 스트레스를 완화합니다.' }
     ]
   };
 
@@ -628,79 +628,30 @@ const BurnoutPredictionApp = () => {
               </div>
             </div>
 
-            {/* 번아웃 극복법의 근본 원리 */}
-            <div className="bg-white rounded-2xl shadow-sm p-4 mb-6">
-              <h3 className="text-lg font-bold mb-4 flex items-center text-gray-800">
-                <Heart className="w-5 h-5 mr-2" />
-                번아웃 극복법의 근본 원리
-              </h3>
-              <div className="space-y-4 text-sm text-gray-700">
-                <div className="bg-blue-50 p-3 rounded-lg">
-                  <h4 className="font-bold text-gray-800 mb-2">🎯 핵심 원리</h4>
-                  <p className="leading-relaxed">
-                    학생 번아웃은 단순한 피로가 아닌 <strong>'학습된 무기력'</strong>과 <strong>'가치관 불일치'</strong>의 결합입니다. 
-                    아무리 노력해도 상황이 바뀌지 않는다는 믿음과 나의 가치관과 학업 환경의 불일치가 핵심 원인입니다.
-                  </p>
-                </div>
-                
-                <div className="grid grid-cols-1 gap-3">
-                  <div className="border-l-4 border-red-400 pl-3">
-                    <h5 className="font-semibold text-red-700">효능감 저하·무력감 (L)</h5>
-                    <p className="text-xs">학습된 무기력: 통제 불가능한 스트레스에 반복 노출되어 발생</p>
-                  </div>
-                  <div className="border-l-4 border-yellow-400 pl-3">
-                    <h5 className="font-semibold text-yellow-700">냉소·탈동기화 (C)</h5>
-                    <p className="text-xs">가치관 불일치: 내적 가치보다 외적 가치에 의한 강요된 학업</p>
-                  </div>
-                  <div className="border-l-4 border-orange-400 pl-3">
-                    <h5 className="font-semibold text-orange-700">정서적·신체적 소진 (E)</h5>
-                    <p className="text-xs">만성적 스트레스: 무기력과 불일치에서 발생하는 지속적 스트레스</p>
-                  </div>
-                </div>
-
-                <div className="bg-green-50 p-3 rounded-lg">
-                  <h4 className="font-bold text-gray-800 mb-2">🔧 해결 방법</h4>
-                  <div className="space-y-2">
-                    <div>
-                      <strong className="text-green-700">철학적 질문 (인지적 재구성)</strong>
-                      <p className="text-xs">자동적 부정적 사고를 멈추고 관점 전환을 통해 주체성 회복</p>
-                    </div>
-                    <div>
-                      <strong className="text-green-700">구조적 행동 (행동 활성화)</strong>
-                      <p className="text-xs">극도로 작은 성공 경험을 통해 '내가 통제할 수 있다'는 믿음 재구축</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-purple-50 p-3 rounded-lg">
-                  <h4 className="font-bold text-gray-800 mb-2">💡 핵심 메시지</h4>
-                  <p className="text-xs leading-relaxed">
-                    <strong>번아웃은 당신의 의지 문제가 아닙니다.</strong> 환경과의 불일치와 학습된 무기력의 결과입니다. 
-                    인지적 관점 전환과 최소 단위의 행동 성공을 통해 주체성을 회복할 수 있습니다.
-                  </p>
-                </div>
-              </div>
-            </div>
-
             {/* 맞춤 솔루션 */}
             <div className="bg-white rounded-2xl shadow-sm p-4">
               <h3 className="text-lg font-bold mb-4 flex items-center text-gray-800">
                 <Activity className="w-5 h-5 mr-2" />
-                학생 번아웃 극복을 위한 구조적/철학적 접근
+                솔루션
               </h3>
               <div className="space-y-3">
                 {result.recommendations.map((rec, idx) => (
                   <div key={idx} className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-3 border-l-4 border-blue-500">
                     <div className="flex items-start">
                       <span className="font-bold text-blue-600 text-lg mr-3 mt-1">{idx + 1}</span>
-                      <div className="flex-1">
-                        <div className="flex items-center flex-wrap mb-2">
-                          <span className="font-bold text-gray-800 mr-2">{rec.title}</span>
-                          <span className="text-xs bg-blue-200 text-blue-800 px-2 py-1 rounded">
-                            {rec.areas}
-                          </span>
+                    <div className="flex-1">
+                      <div className="flex items-center flex-wrap mb-2">
+                        <span className="font-bold text-gray-800 mr-2">{rec.title}</span>
+                        <span className="text-xs bg-blue-200 text-blue-800 px-2 py-1 rounded">
+                          {rec.areas}
+                        </span>
+                      </div>
+                      <p className="text-gray-700 text-sm leading-relaxed mb-2">{rec.detail}</p>
+                      {rec.principle && (
+                        <div className="bg-gray-50 p-2 rounded text-xs text-gray-600">
+                          <strong>원리:</strong> {rec.principle}
                         </div>
-                        <p className="text-gray-700 text-sm leading-relaxed">{rec.detail}</p>
+                      )}
                         {result.solutionDates[idx] && result.dday > 0 && (
                           <div className="text-sm text-gray-600 mt-2">
                             📅 시작일: {result.solutionDates[idx].toLocaleDateString('ko-KR', { month: 'short', day: 'numeric' })}
